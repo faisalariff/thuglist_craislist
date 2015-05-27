@@ -1,0 +1,13 @@
+<div class="container" width:750px>
+
+  <br>
+  <img src="http://www.thuglife-store.com/out/tls/img/tl-logo-new.jpg" align="middle">
+  <img src="http://news.bbc.co.uk/olmedia/1885000/images/_1886030_aliprem4.jpg">
+  <br><br>
+  <h1>Buy Your Bling Here!</h1>
+
+  <ul>
+    <% @bling.each do |bling| %>
+      <li><%= bling.posttitle %> - <%= bling.price %> - <%= bling.email %></li>
+    <% end %>
+  </ul>

@@ -1,0 +1,29 @@
+<div class="container">
+
+  <br>
+  <img src="http://www.thuglife-store.com/out/tls/img/tl-logo-new.jpg">
+   <font size="3"><h1>ThugsList Trading Co</h1>
+
+
+  <form action="/home" method="post">
+
+    <%@categories.each do |category| %>
+      <a href="/categories/<%= category.id %>"><%= category.name %></a><br>
+    <!--
+      <input type="radio" name="option1" value="get_buy_guns" checked>
+
+      Buy Guns<br>
+      <input type="radio" name="option1" value="post_sell_guns"> Sell Guns<br>
+      <input type="radio" name="option1" value="get_buy_drugs"> Buy Drugs<br>
+      <input type="radio" name="option1" value="post_sell_drugs"> Sell Drugs<br>
+      <input type="radio" name="option1" value="get_buy_bling"> Buy Bling<br>
+      <input type="radio" name="option1" value="post_sell_bling"> Sell Bling<br>
+      <br>
+      <input type="submit" value="Submit"> -->
+    <% end %>
+  </form>
+
+    <br>
+  <img src="http://www.etinside.com/wp-content/uploads/2014/08/151.jpg">
+  <p>"I didn't choose the thug life, the thug life chose me"</p>
+</div>

@@ -1,0 +1,13 @@
+<div class="container" width:750px>
+
+  <br>
+  <img src="http://www.thuglife-store.com/out/tls/img/tl-logo-new.jpg" align="middle">
+  <img src="http://www.doomsteaddiner.net/blog/wp-content/uploads/2015/03/crack.jpg" align="middle">
+  <br><br>
+  <h1>Buy Your Drugs Here!</h1>
+
+  <ul>
+    <% @drugs.each do |drug| %>
+      <li><%= drug.posttitle %> - <%= drug.price %> - <%= drug.email %></li>
+    <% end %>
+  </ul>

@@ -1,0 +1,15 @@
+<div class="container" width:750px>
+
+  <br>
+  <img src="http://www.thuglife-store.com/out/tls/img/tl-logo-new.jpg" align="middle">
+  <img src="https://scienceofdefence.files.wordpress.com/2011/05/936full-black-dynamite-screenshot.png" height="250" width="450" align="middle">
+  <p>"Donuts don't wear alligator shoes."</p>
+
+  <br><br>
+  <h1>Buy Your Guns Here!</h1>
+
+  <ul>
+    <% @guns.each do |gun| %>
+      <li><%= gun.posttitle %> - <%= gun.price %> - <%= gun.email %></li>
+    <% end %>
+  </ul>

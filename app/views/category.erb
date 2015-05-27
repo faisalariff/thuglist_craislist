@@ -1,0 +1,42 @@
+<div class="container" width:750px>
+
+  <br>
+  <img src="http://www.thuglife-store.com/out/tls/img/tl-logo-new.jpg" align="middle">
+  <img src="http://news.bbc.co.uk/olmedia/1885000/images/_1886030_aliprem4.jpg">
+  <br><br>
+  <h1>Buy Your <%= @category.display_name.capitalize%> Here!</h1>
+
+  <ul>
+    <% if !@posts.nil? %>
+      <% @posts.each do |post| %>
+        <li><%= post.posttitle %> - <%= post.postdesc%> - <%= post.price %> - <%= post.email %></li>
+      <% end %>
+    <% end %>
+  </ul>
+
+ <font size="3"><h1>Sell your <%= @category.display_name%> here!</h1>
+  <p>Enter your <%= @category.name%> details here</p>
+
+  <form action="/categories/<%= @category.id%>/posts/new" method="post">
+    Type:<br>
+    <input type="text" name="post[posttitle]">
+    <br><br>
+    Description:<br>
+    <input type="text" name="post[postdesc]">
+    <br><br>
+    Price:<br>
+    <input type="text" name="post[price]">
+    <br><br>
+    Address:<br>
+    <input type="text" name="post[address]">
+    <br><br>
+    Your name:<br>
+    <input type="text" name="post[name]">
+    <br><br>
+    Your email:<br>
+    <input type="text" name="post[email]">
+    <br><br>
+
+    <input type="submit" value="Submit">
+    <br>
+  </form>
